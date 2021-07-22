@@ -5,7 +5,7 @@
     ReactHukForm
     Yup
     Sweet Alert 2
-Link to Page https://saurocket.github.io/goit-react-hw-01-components    
+Link to Page https://saurocket.github.io/goit-react-hw-02-phonebook    
     
  
     

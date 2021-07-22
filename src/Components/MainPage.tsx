@@ -33,6 +33,20 @@ export class MainPage extends React.Component<IProps, IState> {
            number: ''
        }
    }
+   componentDidMount(): void {
+       const constants = localStorage.getItem('contacts')
+
+       if (constants){
+           this.setState({contacts: JSON.parse(constants)})
+       }
+   }
+
+    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>): void {
+       if (this.state.contacts !== prevState.contacts){
+           localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
+       }
+   }
+
     onChangeName = (value: string) => {
        this.setState(prevState => {
            return {...prevState, name: value}
